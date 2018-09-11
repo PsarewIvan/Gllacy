@@ -14,14 +14,37 @@
           <img src="img/logo.svg" alt="Main Logo">
         </a>
         <ul class="main-navigation__list">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="main-navigation__menu">
+              <li>Новинки</li>
+              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="delivery-pay.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
         </ul>
       </nav>
-      <button class="main-navigation__button-search"></button>
-      <button class="main-navigation__button-logIn"></button>
-      <button class="main-navigation__button-cart"></button>
+      <a class="main-navigation__button-search">
+        <form style="main-navigation__search" action="search" >
+          <input type="text" placeholder="Что ищем?">
+<!--          доделать надо форму поиска без кнопки-->
+        </form>
+      </a>
+      <a class="main-navigation__button-logIn">
+        <form action="login" class="main-navigation__login-form">
+          <input type="email" placeholder="Электронная почта">
+          <input type="text">
+          <button style="main-navigation__login-form--button  gllacy-button">Войти</button>
+          <ul class="main-navigation__login-form--list">
+            <li><a href="frg-pass.html">Забыли пароль?</a></li>
+            <li><a href="reg.html">Новая регистрация</a></li>
+          </ul>
+        </form>
+      </a>
+      <a class="main-navigation__button-cart"></a>
       <p class="main-navigation__contactUs">
         <span class="contactUs-time">С 10 до 20, ежедневно</span>
         <br>
@@ -134,6 +157,19 @@
         <p>Сделано в <span>HTML Academy ©</span><time datetime="2018-09-10">2018</time></p>
       </div>
     </footer>
+    
+    <section class="modal-contact">
+      <h3 class="visually-hidden">Форма обратной связи</h3>
+      <p>Мы обязательно Вам ответим!</p>
+      <form action="contact-us">
+        <input type="text" placeholder="Как Вас зовут?">
+        <input type="email" placeholder="Ваша почта для ответа?">
+        <p>
+         <textarea placeholder="Напишите что_нибудь...">Напишите что-нибудь...</textarea>
+        </p>
+        <button class="modal-contact__button gllacy-button">Отправить</button>
+      </form>
+    </section>
     
   </div>
 </body>
