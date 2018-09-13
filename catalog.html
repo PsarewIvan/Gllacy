@@ -9,11 +9,11 @@
   <div class="wrapper">
     <header class="mainHeader">      
       <nav class="main-navigation">
-        <a class="main-navigation__logo">
+        <a href="index.html" class="main-navigation__logo">
           <img src="img/logo.svg" alt="Main Logo">
         </a>
         <ul class="main-navigation__list">
-          <li><a href="catalog.html">Каталог</a>
+          <li class="site-navigation-current"><a href="catalog.html">Каталог</a>
             <ul class="main-navigation__menu">
               <li>Новинки</li>
               <li><a href="#">Сливочное</a></li>
@@ -24,6 +24,11 @@
           </li>
           <li><a href="delivery-pay.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
+        </ul>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="main-catalog.html">Каталог</a></li>
+          <li class="breadcrumbs-current">Сливочное</li>
         </ul>
       </nav>
       <a class="main-navigation__button-search">
@@ -51,8 +56,173 @@
       </p>
     </header>
     
-    <main class="catalog">
+    <main class="catalog-cream">
+      <h1 class="visually-hidden">Выбор сливочного мороженое</h1>
+      <section class="filters">
+<!--        тут форму добавлю-->
+      </section>
       
+      <section class="catalog catalog-cream">
+        <h2 class="visually-hidden">Сливочное мороженное</h2>
+        <ul class="catalog__list">
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/hits1.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">310</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/hits2.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">380</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/hits3.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">355</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/hits4.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">415</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное с брусничным джемом</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream5.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">325</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочно-черничное с цельными ягодами черники</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream6.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">410</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочно-лимонное с карамельной присыпкой</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream7.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">375</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное с шоколадной стружкой</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream8.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">320</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочно-ванильное с кусочками шоколада</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream9.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">440</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочноe с ментоловым сиропом</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/ceam10.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">435</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное с кусочками черного шоколада</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream11.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">355</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <h3>
+              <a href="catalog-item.html">Сливочное с мятным сиропом</a>
+            </h3>
+            <a href="catalog-item">
+              <figure>
+                <p><img src="img/cream12.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
+                <figcaption>
+                  <span class="catalog--price">420</span><span   class="catalog--rank"> р/кг</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
     
      <footer class="main-footer">
