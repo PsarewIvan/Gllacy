@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Glaccy</title>
@@ -8,54 +8,65 @@
 <body>
   <div class="wrapper">
         
-    <header class="mainHeader">      
-      <nav class="main-navigation">
-        <a href="index.html" class="main-navigation__logo">
-          <img src="img/logo.svg" alt="Main Logo">
-        </a>
+    <header class="main-header">      
+       <div class="main-navigation__logo">
+          <img src="img/logo.svg" alt="Логотип магазина мороженного">
+       </div>
+       <nav class="main-navigation">
         <ul class="main-navigation__list">
-          <li class="site-navigation-current"><a href="catalog.html">Каталог</a>
-            <ul class="main-navigation__menu">
-              <li>Новинки</li>
-              <li><a href="#">Сливочное</a></li>
+          <li class="site-navigation-current" aria-label="Основная навигация">
+            <a href="#">Каталог</a>
+            <ul class="main-navigation__menu display-none">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="delivery-pay.html">Доставка и оплата</a></li>
-          <li><a href="about.html">О Компании</a></li>
-        </ul>
-        <ul class="breadcrumbs">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="main-catalog.html">Каталог</a></li>
-          <li class="breadcrumbs-current">Сливочное</li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
         </ul>
       </nav>
-      <a class="main-navigation__button-search"></a>
-        <form class="main-navigation__search" action="search" >
-          <input type="text" placeholder="Что ищем?">
-<!--          доделать надо форму поиска без кнопки-->
+      <div class="main-navigation-search">
+        <button type="button" class="main-navigation__button-search" aria-label="Форма поиска"></button>
+        <form action="search" method="get">
+          <label for="search-area" class="visually-hidden">Поле ввода для поиска</label>
+          <input type="text" id="search-area" placeholder="Что ищем?">
+          <button type="submit" class="visually-hidden" aria-label="Найти"></button>
         </form>
-      <a class="main-navigation__button-logIn"></a>
-        <form action="login" class="main-navigation__login-form">
-          <input type="email" placeholder="Электронная почта">
-          <input type="text">
-          <button class="main-navigation__login-form--button  gllacy-button">Войти</button>
-          <ul class="main-navigation__login-form--list">
+      </div>
+      <div class="main-navigation-login">
+        <button type="button" class="main-navigation__button-logIn" aria-label="Форма входа на сайт">Вход</button>
+        <div class="main-navigation__login-form">
+           <form action="login" method="post">
+            <label for="email-area" class="visually-hidden">Введите свою электронную почту</label>
+            <input type="email" id="email-area" placeholder="Электронная почта">
+            <label for="password-area" class="visually-hidden">Введите пароль</label>
+            <input type="password" id="password-area" placeholder="Пароль">
+            <button type="submit" class="button main-navigation__login-button">Войти</button>
+          </form>
+        <ul class="main-navigation__login-form--list">
             <li><a href="frg-pass.html">Забыли пароль?</a></li>
             <li><a href="reg.html">Новая регистрация</a></li>
-          </ul>
+        </ul>
+        </div>
+      </div>
+      <div class="main-navigation-cart">
+        <button type="button" class="main-navigation__button-cart" aria-label="Корзина">Пусто</button>
+        <form action="cart" method="post">
+<!--            тут нужно добавлять как-то товары-->
+<!--         высчитывать стоимость общую-->
+          <button type="submit" class="button cart-button">Оформить заказ</button>
         </form>
-      <a class="main-navigation__button-cart"></a>
-        <form class="main-navigation__cart" action="cart">
-<!--          как-то надо оформить форму корзины-->
-        </form>
-      <p class="main-navigation__contactUs">
+      </div>
+      <div class="main-navigation__contactus">
+        <p>
         <span class="contactUs-time">С 10 до 20, ежедневно</span>
         <br>
         <span class="contactUs-tel">8 812 450-25-25</span>
-      </p>
+        </p>
+      </div>
     </header>
        
     <main class="main-cotent">
@@ -69,22 +80,20 @@
       <section class="main-banner raspberry">
         <h2>Малинка даром!</h2>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <a href="#" class="main-banner__button gllacy-button">Хочу варенье!</a>
+        <a href="#" class="main-banner__button button">Хочу варенье!</a>
       </section>
       <section class="main-banner choco">
         <h2>Шоколадки даром!</h2>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a href="#" class="main-banner__button glacy-button">Хочу шоколадки!</a>
+        <a href="#" class="main-banner__button button">Хочу шоколадки!</a>
       </section>
       
       <section class="catalog catalog-hits">
-        <h2 class="visually-hidden">Мороженное-Хит</h2>
+        <h2 class="visually-hidden">Лучшее мороженое</h2>
         <ul class="catalog__list">
           <li>
-            <h3>
-              <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </h3>
-            <a href="catalog-item">
+            <a href="catalog-item.html">
+              <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               <figure>
                 <p><img src="img/hits1.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
@@ -94,10 +103,8 @@
             </a>
           </li>
           <li>
-            <h3>
-              <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
-            </h3>
-            <a href="catalog-item">
+            <a href="catalog-item.html">
+              <h3>Сливочно-кофейное с кусочками шоколада</h3>
               <figure>
                 <p><img src="img/hits2.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
@@ -107,10 +114,8 @@
             </a>
           </li>
           <li>
-            <h3>
-              <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            </h3>
-            <a href="catalog-item">
+            <a href="catalog-item.html">
+              <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
               <figure>
                 <p><img src="img/hits3.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
@@ -120,10 +125,8 @@
             </a>
           </li>
           <li>
-            <h3>
-              <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
-            </h3>
-            <a href="catalog-item">
+            <a href="catalog-item.html">
+              <h3>Сливочное крем-брюле с карамельной подливкой</h3>
               <figure>
                 <p><img src="img/hits4.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
@@ -152,18 +155,19 @@
       <section class="main-mailing">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <form action="mail">
-          <input type="text" value="Электронная почта">
-          <button class="main-mailing__button gllacy-button">Отправить</button>
+        <form action="mail" method="post">
+          <label for="mail-form" class="visually-hidden">Введите адрес электронной потчы</label>
+          <input type="email" id="mail-form" placeholder="Электронная почта">
+          <button class="main-mailing__button button">Отправить</button>
         </form>
       </section>
       
       <section class="main-map">
-      <h2 class="visually-hidden">Карта</h2>
+      <h2 class="visually-hidden">Как наснайти. Карта</h2>
       
 <!--        тут еще карту добавить-->
        
-        <form action="contact" class="contact-us">
+        <form action="contact" class="contact-us" method="post">
           <p>Адрес главного офиса<br>
              и офлайн-магазина:<br>
              <span>ул. Большая Конюшенная<br>
@@ -171,19 +175,19 @@
              Для заказов по телефону:<br>
              <span>8 812 450-25-25</span>
              (с 10 до 20 ежедневно)</p>
-          <button class="contact-us__button gllacy-button">Форма обратной связи</button>
+          <button type="button" id="modal-button__contact-us" class="contact-us__button gllacy-button">Форма обратной связи</button>
         </form>
       </section>
     </main>
     
     <footer class="main-footer">
-      <ul class="main-footer__social">
-        <li><a href="#" class="main-footer__social--twitter"></a></li>
-        <li><a href="#" class="main-footer__social--instagram"></a></li>
-        <li><a href="#" class="main-footer__social--facebook"></a></li>
-        <li><a href="#" class="main-footer__social--vkontakte"></a></li>
+      <ul class="main-footer__social" aria-label="Мы в соцсетях">
+        <li><a href="#" class="main-footer__social--twitter" aria-label="Twitter"></a></li>
+        <li><a href="#" class="main-footer__social--instagram" aria-label="instagram"></a></li>
+        <li><a href="#" class="main-footer__social--facebook" aria-label="facebook"></a></li>
+        <li><a href="#" class="main-footer__social--vkontakte" aria-label="vkontakte"></a></li>
       </ul>
-      <ul class="main-footer__link">
+      <ul class="main-footer__link" aria-label="Дополнительная информация">
         <li><a href="#">Для поставщиков</a></li>
         <li><a href="#">О производстве </a></li>
         <li><a href="#">Наши документы</a></li>
@@ -191,7 +195,7 @@
       </ul>
       <div class="main-footer__made-in">
         <a href="https://htmlacademy.ru">
-          <img src="img/logo.svg" alt="HTMLacademy Logo">
+          <img src="img/logo.svg" alt="Ссылка на сайт HTMLacademy">
         </a>
         <p>Сделано в <span>HTML Academy ©</span><time datetime="2018-09-10">2018</time></p>
       </div>
@@ -201,12 +205,15 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно Вам ответим!</p>
       <form action="contact-us">
-        <input type="text" placeholder="Как Вас зовут?">
-        <input type="email" placeholder="Ваша почта для ответа?">
+        <label for="modal-contact-name" class="visually-hidden">Как вас зовут?</label>
+        <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?">
+        <label for="modal-contact-email" class="visually-hidden">Введите Вашу почту</label>
+        <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?">
         <p>
-         <textarea placeholder="Напишите что_нибудь..."></textarea>
+         <label for="modal-contact-about" class="visually-hidden">Напишите что-нибудь</label>
+         <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..."></textarea>
         </p>
-        <button class="modal-contact__button gllacy-button">Отправить</button>
+        <button type="submit" class="modal-contact__button button">Отправить</button>
       </form>
     </section>
     
