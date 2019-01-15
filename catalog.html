@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Catalog</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
   
 </head>
 <body>
   <div class="wrapper">
     <header class="main-header">      
-      <div class="main-navigation__logo">
+      <div class="main-navigation-logo">
           <img src="img/logo.svg" alt="Логотип магазина мороженного">
        </div>
        <nav class="main-navigation">
-        <ul class="main-navigation__list">
+        <ul class="main-navigation-list">
           <li class="site-navigation-current" aria-label="Основная навигация">
             <a href="#">Каталог</a>
-            <ul class="main-navigation__menu display-none">
+            <ul class="main-navigation-menu display-none">
               <li><a href="#">Новинки</a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
+              <li class="current-link-sub-menu"><a>Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
@@ -28,7 +32,7 @@
         </ul>
       </nav>
       <div class="main-navigation-search">
-        <button type="button" class="main-navigation__button-search" aria-label="Форма поиска"></button>
+        <button type="button" class="main-navigation-button-search" aria-label="Форма поиска"></button>
         <form action="search" method="get">
           <label for="search-area" class="visually-hidden">Поле ввода для поиска</label>
           <input type="text" id="search-area" placeholder="Что ищем?">
@@ -36,30 +40,30 @@
         </form>
       </div>
       <div class="main-navigation-login">
-        <button type="button" class="main-navigation__button-logIn" aria-label="Форма входа на сайт">Вход</button>
-        <div class="main-navigation__login-form">
+        <button type="button" class="main-navigation-button-logIn" aria-label="Форма входа на сайт">Вход</button>
+        <div class="main-navigation-login-form">
            <form action="login" method="post">
             <label for="email-area" class="visually-hidden">Введите свою электронную почту</label>
             <input type="email" id="email-area" placeholder="Электронная почта">
             <label for="password-area" class="visually-hidden">Введите пароль</label>
             <input type="password" id="password-area" placeholder="Пароль">
-            <button type="submit" class="button main-navigation__login-button">Войти</button>
+            <button type="submit" class="button main-navigation-login-button">Войти</button>
           </form>
-        <ul class="main-navigation__login-form--list">
+        <ul class="main-navigation-login-form-list">
             <li><a href="frg-pass.html">Забыли пароль?</a></li>
             <li><a href="reg.html">Новая регистрация</a></li>
         </ul>
         </div>
       </div>
       <div class="main-navigation-cart">
-        <button type="button" class="main-navigation__button-cart" aria-label="Корзина">Пусто</button>
+        <button type="button" class="main-navigation-button-cart" aria-label="Корзина">Пусто</button>
         <form action="cart" method="post">
-<!--            тут нужно добавлять как-то товары-->
-<!--         высчитывать стоимость общую-->
+<!-            тут нужно добавлять как-то товары->
+<!-         высчитывать стоимость общую->
           <button type="submit" class="button cart-button">Оформить заказ</button>
         </form>
       </div>
-      <div class="main-navigation__contactus">
+      <div class="main-navigation-contactus">
         <p>
         <span class="contactUs-time">С 10 до 20, ежедневно</span>
         <br>
@@ -86,7 +90,7 @@
             <option value="fat">по жирности</option>
           </select>
           <label for="price">Цена: <span id="min-price">100</span> руб - <span id="max-price">500</span> руб.</label>
-<!--          надо менять ранж, скорее всего на плагин джейквери-->
+<!-          надо менять ранж, скорее всего на плагин джейквери->
           <input type="range" id="price" min="0" max="500" step="50">
           <fieldset>
             <legend>Жирность:</legend>
@@ -136,14 +140,14 @@
       
       <section class="catalog catalog-cream">
         <h2 class="visually-hidden">Сливочное мороженное</h2>
-        <ul class="catalog__list">
+        <ul class="catalog-list">
           <li>
             <a href="catalog-item.html">
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               <figure>
                 <p><img src="img/hits1.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">310</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">310</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -154,7 +158,7 @@
               <figure>
                 <p><img src="img/hits2.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">380</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">380</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -165,7 +169,7 @@
               <figure>
                 <p><img src="img/hits3.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">355</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">355</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -176,7 +180,7 @@
               <figure>
                 <p><img src="img/hits4.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">415</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">415</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -187,7 +191,7 @@
               <figure>
                 <p><img src="img/cream5.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">325</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">325</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -198,7 +202,7 @@
               <figure>
                 <p><img src="img/cream6.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">410</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">410</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -209,7 +213,7 @@
               <figure>
                 <p><img src="img/cream7.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">375</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">375</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -220,7 +224,7 @@
               <figure>
                 <p><img src="img/cream8.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">320</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">320</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -231,7 +235,7 @@
               <figure>
                 <p><img src="img/cream9.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">440</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">440</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -242,7 +246,7 @@
               <figure>
                 <p><img src="img/ceam10.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">435</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">435</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -253,7 +257,7 @@
               <figure>
                 <p><img src="img/cream11.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">355</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">355</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -264,7 +268,7 @@
               <figure>
                 <p><img src="img/cream12.jpg" alt="Ice-cream Hits" width="600" height="600"></p>
                 <figcaption>
-                  <span class="catalog--price">420</span><span   class="catalog--rank"> р/кг</span>
+                  <span class="catalog-price">420</span><span   class="catalog-rank"> р/кг</span>
                 </figcaption>
               </figure>
             </a>
@@ -285,19 +289,19 @@
     </main>
     
      <footer class="main-footer">
-      <ul class="main-footer__social" aria-label="Мы в соцсетях">
-        <li><a href="#" class="main-footer__social--twitter" aria-label="Twitter"></a></li>
-        <li><a href="#" class="main-footer__social--instagram" aria-label="instagram"></a></li>
-        <li><a href="#" class="main-footer__social--facebook" aria-label="facebook"></a></li>
-        <li><a href="#" class="main-footer__social--vkontakte" aria-label="vkontakte"></a></li>
+      <ul class="main-footer-social" aria-label="Мы в соцсетях">
+        <li><a href="#" class="main-footer-social-twitter" aria-label="Twitter"></a></li>
+        <li><a href="#" class="main-footer-social-instagram" aria-label="instagram"></a></li>
+        <li><a href="#" class="main-footer-social-facebook" aria-label="facebook"></a></li>
+        <li><a href="#" class="main-footer-social-vkontakte" aria-label="vkontakte"></a></li>
       </ul>
-      <ul class="main-footer__link" aria-label="Дополнительная информация">
+      <ul class="main-footer-link" aria-label="Дополнительная информация">
         <li><a href="#">Для поставщиков</a></li>
         <li><a href="#">О производстве </a></li>
         <li><a href="#">Наши документы</a></li>
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
-      <div class="main-footer__made-in">
+      <div class="main-footer-made-in">
         <a href="https://htmlacademy.ru">
           <img src="img/logo.svg" alt="Ссылка на сайт HTMLacademy">
         </a>
