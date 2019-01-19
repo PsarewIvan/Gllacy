@@ -6,7 +6,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -16,6 +15,10 @@
 Добавить нормальный ховер на хиты,
 JS на слайдер адекватный,
 Карту запилить
+проверить на переполнение
+svg хиты поправить
+поддержка браузеров
+
 -->
 
 
@@ -23,18 +26,18 @@ JS на слайдер адекватный,
   <div class="slider-wrapper-1">
 
     <header class="main-header">
-
-       <div class="float-left">
-         <div class="main-navigation-logo">
-            <img src="img/min/logo.svg" alt="Логотип магазина мороженного">
-         </div>
-
-         <nav class="main-navigation" aria-label="Основная навигация">
-          <ul class="main-navigation-list">
+    
+      <nav class="main-navigation-block">
+        <div class="main-navigation-logo">
+           <a>
+              <img src="img/min/logo.svg" alt="Логотип магазина мороженного">
+           </a>
+        </div>
+        <ul class="main-navigation-list">
             <li>
               <a class="main-menu-link" href="#">Каталог</a>
-              <ul class="main-navigation-sub-menu display-none">
-                <li><a class="main-menu-link" href="#" class="sub-menu-first-list">Новинки</a></li>
+              <ul class="main-navigation-sub-menu display-hidden">
+                <li><a class="main-menu-link sub-menu-first-list" href="#">Новинки</a></li>
                 <li><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
                 <li><a class="main-menu-link" href="#">Щербеты</a></li>
                 <li><a class="main-menu-link" href="#">Фруктовый лед</a></li>
@@ -44,18 +47,16 @@ JS на слайдер адекватный,
             <li><a class="main-menu-link" href="#">Доставка и оплата</a></li>
             <li><a class="main-menu-link" href="#">О Компании</a></li>
           </ul>
-        </nav>
-      </div>
-
-      <div class="float-right main-navigation-right-block">
-       
+      </nav>
+      
+      <div class="main-navigation-block">
         <div class="main-navigation-search">
           <button type="button" class="main-navigation-button-search navigation-button" aria-label="Форма поиска">
             <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
 	          <path fill="#FFFFFF" id="search-icon-path" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5 S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2S11,4.019,11,6.5S8.981,11,6.5,11z"/>
             </svg>
           </button>
-          <div class="search-wrapper display-none large-trigger-area">
+          <div class="search-wrapper display-hidden">
             <form action="search" method="get" class="search-form">
               <label for="search-area" class="visually-hidden">Что ищем?</label>
               <input type="text" id="search-area" placeholder="Что ищем?">
@@ -74,7 +75,7 @@ JS на слайдер адекватный,
             </svg>
             Вход
           </button>
-          <div class="main-navigation-login-form display-none large-trigger-area">
+          <div class="main-navigation-login-form display-hidden">
               <form action="login" method="post" class="login-form">
                 <label for="email-area" class="visually-hidden">Введите свою электронную почту</label>
                 <input type="email" id="email-area" placeholder="Электронная почта">
@@ -101,10 +102,10 @@ JS на слайдер адекватный,
             </svg>
             Пусто
           </button>
-          <div class="cart-form-wrapper display-none large-trigger-area">
+          <div class="cart-form-wrapper display-hidden">
             <form action="cart" method="post" class="cart-form">
               <div class="cart-products">
-                <section class="cart-product">
+                <div class="cart-product">
                   <table class="table-product">
                     <tr>
                       <td>
@@ -115,8 +116,8 @@ JS на слайдер адекватный,
                       <td>300 руб.</td>
                     </tr>
                   </table>
-                </section>
-                <section class="cart-product">
+                </div>
+                <div class="cart-product">
                   <table class="table-product">
                     <tr>
                       <td>
@@ -127,14 +128,14 @@ JS на слайдер адекватный,
                       <td>450 руб.</td>
                     </tr>
                   </table>
-                </section>
+                </div>
               </div>
               <p class="total-price">Итого: 750 руб.</p>
               <button type="submit" class="button cart-button">Оформить заказ</button>
             </form>
           </div>
         </div>
-
+        
         <div class="main-navigation-contactus">
           <p>
             <span class="contactUs-time">С 10 до 20, ежедневно</span><br>
@@ -142,6 +143,7 @@ JS на слайдер адекватный,
           </p>
         </div>
       </div>
+    
     </header>
 
     <main class="main-cotent">
@@ -149,22 +151,22 @@ JS на слайдер адекватный,
 
       <section class="slider">
         <h2 class="visually-hidden">Выгодное предложение</h2>
-        <section class="slide">
+        <div class="slide">
           <p>Крем-брюле и пломбир с малиновым джемом</p>
           <button type="button" class="button slide-button">Давайте оба!</button>
-        </section>
-        <section class="slide">
+        </div>
+        <div class="slide">
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <button type="button" class="button slide-button">Давайте оба!</button>
-        </section>
-        <section class="slide">
+        </div>
+        <div class="slide">
           <p>Пломбир с помадкой и клубничный щербет</p>
           <button type="button" class="button slide-button">Давайте оба!</button>
-        </section>
+        </div>
         <div class="slider-controls">
-          <button class="control-button"><p class="visually-hidden">Первый слайд</p></button>
-          <button class="control-button"><p class="visually-hidden">Второй слайд</p></button>
-          <button class="control-button"><p class="visually-hidden">Третий слайд</p></button>
+          <button class="control-button"><span class="visually-hidden">Первый слайд</span></button>
+          <button class="control-button"><span class="visually-hidden">Второй слайд</span></button>
+          <button class="control-button"><span class="visually-hidden">Третий слайд</span></button>
         </div>
       </section>
 
@@ -195,7 +197,7 @@ JS на слайдер адекватный,
                   </figcaption>
                 </figure>
               </a>
-              <button class="button hits-button display-none" type="button">Быстрый просмотр</button>
+              <button class="button hits-button display-hidden" type="button">Быстрый просмотр</button>
             </div>
           </li>
           <li>
@@ -209,7 +211,7 @@ JS на слайдер адекватный,
                   </figcaption>
                 </figure>
               </a>
-              <button class="button hits-button display-none" type="button">Быстрый просмотр</button>
+              <button class="button hits-button display-hidden" type="button">Быстрый просмотр</button>
             </div>
           </li>
           <li>
@@ -223,7 +225,7 @@ JS на слайдер адекватный,
                   </figcaption>
                 </figure>
               </a>
-              <button class="button hits-button display-none" type="button">Быстрый просмотр</button>
+              <button class="button hits-button display-hidden" type="button">Быстрый просмотр</button>
             </div>
           </li>
           <li>
@@ -237,7 +239,7 @@ JS на слайдер адекватный,
                   </figcaption>
                 </figure>
               </a>
-              <button class="button hits-button display-none" type="button">Быстрый просмотр</button>
+              <button class="button hits-button display-hidden" type="button">Быстрый просмотр</button>
             </div>
           </li>
           
@@ -278,7 +280,7 @@ JS на слайдер адекватный,
 <!--        тут еще карту добавить-->
 
         <img src="img/map.jpg" alt="Карта, как добраться до магазина" width="1200" height="430">
-        <form action="contact" class="contact-us" method="post">
+        <div class="contact-us">
           <p>Адрес главного офиса<br>
              и офлайн-магазина:<br>
              <span>ул. Большая Конюшенная<br>
@@ -287,7 +289,7 @@ JS на слайдер адекватный,
              <span>8 812 450-25-25</span><br>
              (с 10 до 20 ежедневно)</p>
           <button type="button" id="modal-button-contact-us" class="contact-us-button button gllacy-button">Форма обратной связи</button>
-        </form>
+        </div>
       </section>
     </main>
 
@@ -318,22 +320,29 @@ JS на слайдер адекватный,
       </div>
     </footer>
 
-    <section class="modal-contact">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p>Мы обязательно Вам ответим!</p>
-      <form action="contact-us">
-        <label for="modal-contact-name" class="visually-hidden">Как вас зовут?</label>
-        <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?">
-        <label for="modal-contact-email" class="visually-hidden">Введите Вашу почту</label>
-        <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?">
-        <p>
-         <label for="modal-contact-about" class="visually-hidden">Напишите что-нибудь</label>
-         <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..."></textarea>
-        </p>
-        <button type="submit" class="modal-contact-button button">Отправить</button>
-      </form>
-    </section>
-
+      <section class="modal-contact modal-display">
+        <div class="modal-head">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <p>Мы обязательно Вам ответим!</p>
+          <button class="modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+              <polygon fill="#231F20" points="17.454,1.46 16.04,0.046 9,7.086 1.96,0.046 0.546,1.46 7.586,8.5 0.546,15.54 1.96,16.954 9,9.914 16.04,16.954 17.454,15.54 10.414,8.5 "/>
+            </svg>
+          </button>
+        </div>
+        <form class="modal-form" action="contact-us" method="post">
+          <label for="modal-contact-name" class="visually-hidden">Как вас зовут?</label>
+          <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?">
+          <label for="modal-contact-email" class="visually-hidden">Введите Вашу почту</label>
+          <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?">
+          <label for="modal-contact-about" class="visually-hidden">Напишите что-нибудь</label>
+          <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..."></textarea>
+          <button type="submit" class="modal-contact-button button">Отправить</button>
+        </form>
+      </section>
+      <div class="modal-overlay modal-display"></div>
+    
   </div>
   </div>
   <script src="js/script.js"></script>
