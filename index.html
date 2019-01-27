@@ -1,14 +1,3 @@
-<!--
-ДОДЕЛАТЬ !
-
-проверить на переполнение
-поддержка браузеров
-разобраться с tabindex
-сделать подгрузку каритнок заранее
-
--->
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -147,20 +136,24 @@
           <h2 class="visually-hidden">Выгодное предложение</h2>
           <div class="slide slide-show" id="slideOne">
             <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <button type="button" class="button slide-button">Давайте оба!</button>
+            <button type="button" class="button slide-button" tabindex="0">Давайте оба!</button>
           </div>
           <div class="slide" id="slideTwo">
             <p>Шоколадный пломбир и лимонный сорбет</p>
-            <button type="button" class="button slide-button">Давайте оба!</button>
+            <button type="button" class="button slide-button" tabindex="-1">Давайте оба!</button>
           </div>
           <div class="slide" id="slideThree">
             <p>Пломбир с помадкой и клубничный щербет</p>
-            <button type="button" class="button slide-button">Давайте оба!</button>
+            <button type="button" class="button slide-button" tabindex="-1">Давайте оба!</button>
           </div>
           <div class="slider-controls">
             <button class="control-button control-button-checked" id="btnSlideOne"><span class="visually-hidden">Первый слайд</span></button>
             <button class="control-button" id="btnSlideTwo"><span class="visually-hidden">Второй слайд</span></button>
             <button class="control-button" id="btnSlideThree"><span class="visually-hidden">Третий слайд</span></button>
+          </div>
+          <div class="slide-image-preload">
+            <img src="img/min/slide_2-min.png" alt="second-slide">
+            <img src="img/min/slide_3-min.png" alt="third slide">
           </div>
         </section>
 
@@ -183,7 +176,7 @@
             <li>
               <div class="hits-link">
                 <a class="light-link" href="catalog-item.html">
-                  <h3><span class="underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
+                  <h3><span class="underline">Сливочное с апельсиновым джемом и цитрусовой стружкой </span></h3>
                   <figure>
                     <p><img src="img/min/hit1-min.png" alt="Ice-cream Hits" width="267" height="267"></p>
                     <figcaption>
@@ -270,7 +263,7 @@
     </div>
     <section class="main-map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002867!2d30.320858715769422!3d59.93871916905457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1548147365358" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002867!2d30.320858715769422!3d59.93871916905457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1548147365358" width="600" height="450" style="border:0" allowfullscreen></iframe>
       <div class="img-map-wrapper">
         <img src="img/map-with-pin.jpg" alt="Карта, как добраться до магазина" width="1200" height="430">
       </div>
@@ -339,13 +332,13 @@
             </svg>
           </button>
         </div>
-        <form class="modal-form" action="contact-us" method="post">
+        <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="modal-contact-name" class="visually-hidden">Как вас зовут?</label>
-          <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?">
+          <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?" name="contactName">
           <label for="modal-contact-email" class="visually-hidden">Введите Вашу почту</label>
-          <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?">
+          <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?" name="contactEmail">
           <label for="modal-contact-about" class="visually-hidden">Напишите что-нибудь</label>
-          <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..."></textarea>
+          <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..." name="contactAbout"></textarea>
           <button type="submit" class="modal-contact-button button">Отправить</button>
         </form>
       </section>

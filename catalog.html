@@ -6,9 +6,10 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nouislider.css">
 </head>
-<body class="catalog-body">
- <div class="body-wrapper-1">
+<body>
+ <div class="body-wrapper-1 catalog-body">
   <div class="wrapper">
    
     <header class="main-header">
@@ -152,7 +153,7 @@
       
       <section class="filters">
         <h2 class="visually-hidden">Фильтр мороженного</h2>
-        <form class="catalog-filters" action="filters" method="post">
+        <form class="catalog-filters" action="https://echo.htmlacademy.ru" method="post">
           <div class="catalog-filters-wrapper">
             <div class="sort-filter filter-element">
               <label for="sort-list">Сортировка:</label>
@@ -164,32 +165,40 @@
               </select>
             </div>
             <div class="price-filter filter-element">
-              <label for="price">Цена: <span id="min-price">100</span> руб - <span id="max-price">500</span> руб.</label>
-              <input type="range" id="price" min="0" max="500" step="50">
+              <p>Цена: <span id="slider-min-value">100</span> руб - <span id="slider-max-value">500</span> руб.</p>
+              <div class="price-slider-wrapper">
+                <div class="price-slider" id="range-slider"></div>
+              </div>
+              <div class="visually-hidden">
+                <label for="min-price-value">Минимальая цена</label>
+                <input type="text" id="min-price-value" name="min-price-value" tabindex="-1">
+                <label for="max-price-value">Максимальная цена</label>
+                <input type="text" id="max-price-value" name="max-price-value" tabindex="-1">
+              </div>
             </div>
             <div class="fat-filter filter-element">
-              <label for="fat">Жирность:</label>
+              <p>Жирность:</p>
               <div class="fat-precent-choise">
                 <div>
-                  <input class="visually-hidden" type="radio" id="0" name="fat" value="0">
-                  <label for="0" tabindex="0">0%</label>
+                  <input class="visually-hidden" type="radio" id="0_fat" name="fat" value="0" tabindex="-1">
+                  <label for="0_fat" tabindex="0">0%</label>
                 </div>
                 <div>
-                  <input class="visually-hidden" type="radio" id="10" name="fat" value="10" checked>
-                  <label for="10" tabindex="0">до 10%</label>
+                  <input class="visually-hidden" type="radio" id="10_fat" name="fat" value="10" checked tabindex="-1">
+                  <label for="10_fat" tabindex="0">до 10%</label>
                 </div>
                 <div>
-                  <input class="visually-hidden" type="radio" id="30" name="fat" value="30">
-                  <label for="30" tabindex="0">до 30%</label>
+                  <input class="visually-hidden" type="radio" id="30_fat" name="fat" value="30" tabindex="-1">
+                  <label for="30_fat" tabindex="0">до 30%</label>
                 </div>
                 <div>
-                  <input class="visually-hidden" type="radio" id="more" name="fat" value="more">
-                  <label for="more" tabindex="0">выше 30%</label>
+                  <input class="visually-hidden" type="radio" id="more_fat" name="fat" value="more" tabindex="-1">
+                  <label for="more_fat" tabindex="0">выше 30%</label>
                 </div>
               </div>
             </div>
             <div class="extenders-filter filter-element">
-             <label for="mixes">Наполнители:</label>
+             <p>Наполнители:</p>
                <div class="extenders-choise">
                  <div>
                    <input type="checkbox" class="visually-hidden" id="choco" name="mixes" value="choco" checked>
@@ -214,7 +223,7 @@
               </div>
             </div>
             <div class="filter-acept-button filter-element">
-              <button type="submit" class="filters-button">Применить</button>
+              <button type="submit" class="filters-button" formtarget="_blank">Применить</button>
             </div>
           </div>
         </form>
@@ -456,5 +465,7 @@
     </footer>
   </div>
   </div>
+  <script src="js/nouislider.js"></script>
+  <script src="js/nouislidercustom.js"></script>
 </body>
 </html>

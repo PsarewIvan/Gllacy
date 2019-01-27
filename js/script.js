@@ -1,3 +1,5 @@
+'use strict';
+
 var modalButton = document.querySelector('.contact-us-button');
 var popup = document.querySelector('.modal-contact');
 var modalClose = popup.querySelector('.modal-close-button');
@@ -10,6 +12,7 @@ var overlay = document.querySelector('.modal-overlay');
 var slideWrapper = document.querySelector('#slide-wrapper');
 var slideArray = document.querySelectorAll('.slide');
 var btnSlideArray = document.querySelectorAll('.control-button');
+var btnInSlideArray = document.querySelectorAll('.slide-button');
 var bodyBackground = document.querySelector('#body-wrapper');
 
 var isStorage = true;
@@ -22,11 +25,13 @@ function slideChange(indexSlideOn, slideLength) {
     if (i === indexSlideOn) {
       slideWrapper.classList.add('slider-wrapper-' + (i + 1));
       btnSlideArray[i].classList.add('control-button-checked');
+      btnInSlideArray[i].setAttribute('tabindex', 0);
       slideArray[i].classList.add('slide-show');
       bodyBackground.classList.add('body-wrapper-' + (i + 1));
     } else {
       slideWrapper.classList.remove('slider-wrapper-' + (i + 1));
       btnSlideArray[i].classList.remove('control-button-checked');
+      btnInSlideArray[i].setAttribute('tabindex', -1);
       slideArray[i].classList.remove('slide-show');
       bodyBackground.classList.remove('body-wrapper-' + (i + 1));
     }
@@ -93,7 +98,9 @@ modalForm.addEventListener('submit', function(evt) {
   if (!inputName.value || !inputEmail.value || !inputText.value) {
     evt.preventDefault();
     popup.classList.remove('modal-error');
-    popup.offsetWidth = popup.offsetWidth;
+//    не работает с use strict
+//    popup.offsetWidth = popup.offsetWidth;
+    void popup.offsetWidth;
     popup.classList.add('modal-error');
   } else {
     if (isStorage) {
