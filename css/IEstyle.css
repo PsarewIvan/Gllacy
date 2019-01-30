@@ -1,0 +1,80 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .main-navigation-list > li:hover > a,
+  .main-navigation-list a:focus {
+    background-color: #f7f6f3;
+    border-radius: 16px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .main-navigation-list li:hover .display-hidden,
+  .main-navigation-list li:focus .display-hidden {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .main-navigation-sub-menu a {
+    text-decoration: none;
+  }
+  
+  .main-navigation-search:hover .display-hidden,
+  .main-navigation-search:focus .display-hidden,
+  .main-navigation-login:hover .display-hidden,
+  .main-navigation-login:focus .display-hidden,
+  .cart-active:hover .display-hidden,
+  .cart-active:focus .display-hidden {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+  }
+  
+  .slide {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  .slide p {
+    margin: auto;
+    margin-top: 275px;
+    margin-bottom: 25px;
+    z-index: 0;
+  }
+  
+  .slide-button {
+    margin: auto;
+    z-index: 0;
+  }
+  
+  .main-banner-button {
+    -ms-flex-item-align: end;
+    align-self: flex-end
+  }
+  
+/*  без этого в IE блок вытягивается на 600 пикселей*/
+  .catalog-list figure {
+    height: 270px;
+  }
+  
+/*  долбанный IE ...*/
+  .main-footer-social a {
+    padding-left: 0.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
