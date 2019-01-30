@@ -36,22 +36,7 @@ function slideChange(indexSlideOn, slideLength) {
       bodyBackground.classList.remove('body-wrapper-' + (i + 1));
     }
   }
-}
-
-//btnSlideArray[0].addEventListener('click', function(evt) {
-//  evt.preventDefault();
-//  slideChange(0, slideArray.length);
-//});
-//
-//btnSlideArray[1].addEventListener('click', function(evt) {
-//  evt.preventDefault();
-//  slideChange(1, slideArray.length);
-//});
-//
-//btnSlideArray[2].addEventListener('click', function(evt) {
-//  evt.preventDefault();
-//  slideChange(2, slideArray.length);
-//});
+} 
 
 [].forEach.call(btnSlideArray, function(el, i) {
   el.addEventListener('click', function(evt) {
