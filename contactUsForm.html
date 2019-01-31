@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма связи</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/IEstyle.css">
+</head>
+<body>
+  <section class="modal-contact">
+    <div class="modal-head">
+      <h1 class="visually-hidden">Форма обратной связи</h1>
+      <p>Мы обязательно Вам ответим!</p>
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </div>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <label for="modal-contact-name" class="visually-hidden">Как вас зовут?</label>
+      <input type="text" id="modal-contact-name" placeholder="Как Вас зовут?" name="contactName" required autofocus>
+      <label for="modal-contact-email" class="visually-hidden">Введите Вашу почту</label>
+      <input type="email" id="modal-contact-email" placeholder="Ваша почта для ответа?" name="contactEmail" required>
+      <label for="modal-contact-about" class="visually-hidden">Напишите что-нибудь</label>
+      <textarea id="modal-contact-about" placeholder="Напишите что-нибудь..." name="contactAbout" required></textarea>
+      <button type="submit" class="modal-contact-button button">Отправить</button>
+    </form>
+  </section>
+  <div class="modal-overlay overlay-show"></div>
+</body>
+</html>
