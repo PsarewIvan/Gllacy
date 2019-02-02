@@ -127,15 +127,19 @@ searchForm.addEventListener('blur', function() {
   this.classList.add('display-hidden')
 }, true);
 
-var loginForm = document.querySelector('.main-navigation-login-form');
 
-loginForm.addEventListener('focus', function() {
-  this.classList.remove('display-hidden')
-}, true);
+//данный код работает некорректно.
+//при нажатии на поле формы сама форма проваливается под слайдер
 
-loginForm.addEventListener('blur', function() {
-  this.classList.add('display-hidden')
-}, true);
+//var loginForm = document.querySelector('.main-navigation-login-form');
+//
+//loginForm.addEventListener('focus', function() {
+//  this.classList.remove('display-hidden')
+//}, true);
+//
+//loginForm.addEventListener('blur', function() {
+//  this.classList.add('display-hidden')
+//}, true);
 
 
 

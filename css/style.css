@@ -556,9 +556,8 @@ input[type="radio"].visually-hidden {
 .main-navigation-button-cart {
   min-width: 116px;
   background-color: rgba(255,255,255,0.2);
-  padding-left: 16px;
   border-radius: 16px;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .main-navigation-button-cart svg {
@@ -743,6 +742,7 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
   margin-top: 0;
+  color: inherit;
 }
 
 /*слайдер*/
@@ -765,26 +765,20 @@ input[type="radio"].visually-hidden {
 }
 
 .slider {
-/*  clear: both;*/
   position: relative;
-  min-height: 483px;
+  min-height: 490px;
 }
 
 .slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: none;
   position: absolute;
   min-height: 490px;
-  opacity: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 } 
 
 .slide p {
-/*  display: inline-block;*/
   font-weight: 700;
   font-size: 60px;
   line-height: 60.35px;
@@ -796,7 +790,6 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-button {
-/*  display: block;*/
   margin: 31px auto 0;
   border: none;
   border-radius: 32px;
@@ -814,14 +807,20 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-show {
-  opacity: 1;
-  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .slider-controls {
   position: absolute;
   bottom: 32px;
   left: 0;
+  bottom: 25px;
   height: 21px;
   z-index: 100;
 }
@@ -1243,7 +1242,8 @@ figcaption .catalog--rank {
 /*карта*/
 .main-map {
   position: relative;
-  margin-bottom: 47px;
+  margin-bottom: 12px;
+  min-height: 450px;
 }
 
 .main-map img {
@@ -1342,7 +1342,8 @@ figcaption .catalog--rank {
 }
 
 .main-footer-social li {
-  margin-right: 11px;  
+  margin-right: 11px;
+  position: relative;
 }
 
 .main-footer-social li:last-child {
@@ -1376,8 +1377,8 @@ figcaption .catalog--rank {
   width: 15px;
   height: 13px;
   position: absolute;
-  top: 0;
-  left: -24px;
+  top: 2px;
+  left: -22px;
 }
 
 .main-footer-link li a {
@@ -1403,11 +1404,13 @@ figcaption .catalog--rank {
   height: 38px;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  padding-left: 0.5px;
 }
 
 .main-footer-social svg {
+  position: absolute;
   opacity: 0.8;
+  top: 3px;
+  left: 3px;
 }
 
 .main-footer-social a:hover,
