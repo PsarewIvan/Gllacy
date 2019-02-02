@@ -775,7 +775,6 @@ input[type="radio"].visually-hidden {
   min-height: 490px;
   left: 0;
   right: 0;
-  overflow: auto;
 } 
 
 .slide p {
