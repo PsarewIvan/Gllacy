@@ -63,7 +63,7 @@
   60%,
   80% {
     -webkit-transform: translateX(10px);
-    transform: translateX(10px)
+    transform: translateX(10px);
   }
   
   0, 100% {
@@ -87,7 +87,7 @@
   60%,
   80% {
     -webkit-transform: translateX(10px);
-    transform: translateX(10px)
+    transform: translateX(10px);
   }
   
   0, 100% {
